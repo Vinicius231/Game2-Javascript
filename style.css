@@ -1,0 +1,141 @@
+:root {
+  --px-tiro: 0;
+}
+body {
+  background: gray;
+  margin: 0;
+  padding: 0;
+}
+.jogoTerminado {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.699);
+  display: none;
+}
+.telaDerrota {
+  background: white;
+  width: 500px;
+  height: 400px;
+  margin: auto;
+  margin-top: 60px;
+  border-radius: 15px;
+}
+.telaDerrota p {
+  font: bolder 25pt Arial;
+  padding: 20px;
+}
+.telaDerrota button {
+  width: 150px;
+  height: 50px;
+  margin-top: 40px;
+  font-size: 12pt;
+}
+
+h1 {
+  position: absolute;
+  font-size: 25pt;
+  right: 50%;
+}
+.limite {
+  width: 90%;
+  height: 500px;
+  border: 1px solid black;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+}
+.personagem {
+  width: 80px;
+  height: 150px;
+  background: green;
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+}
+.olho {
+  width: 20px;
+  height: 15px;
+  background: black;
+  position: absolute;
+  bottom: 120px;
+  left: 60px;
+}
+.tiro {
+  width: 15px;
+  height: 10px;
+  background: blue;
+  position: absolute;
+  bottom: 80px;
+  left: 10px;
+}
+.inimigo {
+  width: 80px;
+  height: 150px;
+  background: red;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  animation: animeInimigo 7s linear infinite;
+}
+.inimigoCosta {
+  width: 80px;
+  height: 150px;
+  background: red;
+  position: absolute;
+  bottom: 0;
+  left: -80px;
+  display: none;
+}
+.inimigoSpeed {
+  width: 80px;
+  height: 150px;
+  background: blue;
+  position: absolute;
+  bottom: 0;
+  left: -80px;
+  display: none;
+}
+
+@keyframes animeTiroDireita {
+  0% {
+    left: var(--px-tiro);
+  }
+  100% {
+    left: 1200px;
+  }
+}
+@keyframes animeTiroEsquerda {
+  0% {
+    left: var(--px-tiro);
+  }
+  100% {
+    left: -1200px;
+  }
+}
+
+@keyframes animeInimigo {
+  0% {
+    right: -80px;
+  }
+  100% {
+    right: 100%;
+  }
+}
+@keyframes animeInimigoCosta {
+  0% {
+    left: -80px;
+  }
+  100% {
+    left: 1200px;
+  }
+}
+@keyframes animeInimigoSpeed {
+  0% {
+    left: -80px;
+  }
+  100% {
+    left: 1200px;
+  }
+}
